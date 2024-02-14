@@ -1,0 +1,307 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:'poppins',sans-serifs;
+}
+:root{
+  --headerOne:1.8rem;
+  --headerTwo:1.5rem;
+  --margin:0 auto;
+  --marginBottom:1rem;
+  --marginleft:.2em;
+  --margintop:0.5rem;
+  --gap:1rem;
+  --margintop2:3.5rem;
+  --marginbottom2:3rem;
+  --span-size:1rem;
+  --padding:.5em;
+}
+body{
+  max-width: 98%;
+  margin: var(--margin);
+  background-color: white;
+}
+h1{
+  font-size: var(--headerOne);
+}
+h2{
+  font-size: var(--headerTwo);
+}
+a{
+  font-size: var(--para);
+  line-height: 1.5rem;
+}
+span{
+  font-size: var(--span-size);
+}
+i{
+  margin: .5em;
+}
+p{
+  font-size:clamp(1.2rem, 1.3vw + 3px,2.8rem);
+  line-height: clamp(1.5rem,10vw + .5rem,2.8rem);
+  width: clamp(45ch,50%,75chs);
+}
+li{
+  font-size: 1rem,6vw + 2px,1.5rem;
+  line-height: 1rem,10vw + 2rem,2.5rem;
+  list-style-type:disc;
+  list-style-position: inside;
+}
+.pageLinks li{
+  list-style-type: none;
+}
+.marginBottom{
+  margin-bottom: var(--marginBottom);
+}
+#imgLogo{
+  width: 3.5rem;
+}
+#menuIcon{
+  width: 2rem;
+}
+.company-name{
+  display: none;
+}
+.SubPages-active{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  width: fit-content;
+  height: fit-content;
+  padding: var(--padding);
+}
+figure{
+  width: 43%;
+}
+img{
+  width: 100%;
+}
+.topDiv{
+  display: flex;;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.879);
+}
+.right-topDiv{
+  display: flex;
+  gap: var(--gap);
+}
+.SubPages{
+  display: none;
+}
+.SubPages li{
+list-style-type: none;
+}
+.SubPages a, .pageLinks a{
+  text-decoration: none;
+  color: brown;
+}
+.SubPages a:hover, .pageLinks a:hover{
+  text-decoration: underline;
+  color: rgba(0, 0, 255, 0.934);
+}
+.logoDiv{
+  flex: 0 1 12rem;
+}
+.memberCountries, .Goals,.choiceDivs{
+  background-color: rgba(211, 211, 211, 0.879);
+}
+.partnerService,.lastDiv,.pageLinks,.contact-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lastDiv{
+  border: 1px solid red;
+  background-color:rgba(147, 214, 240, 0.997);
+}
+.FAQ-section li{
+  list-style-position:inside;
+  margin-bottom: var(--marginBottom);
+}
+.mainSection{
+  margin-left: var(--marginleft);
+  margin-top: var(--margintop);
+ }
+ .contact-media{
+  margin-bottom:3rem;
+  border: 1px solid red;
+ }
+ .workingHours{
+  margin-bottom: var(--marginBottom);
+ }
+ footer{
+  margin-top: var(--margintop);
+ }
+ .Documents,.shipping,.contact-media,.FAQ-section{
+  background-color: beige;
+ }
+ @media screen and (min-width:420px){
+  .company-name{
+    display: none;
+  }
+   .topDiv{
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 0;
+  }
+  .SubPages{
+    display: none;
+  }
+  .contact-media{
+    display: flex;
+  }
+  .media-platforms{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: var(--margintop);
+  }
+ }
+ @media screen and (min-width:769px){
+  .company-name{
+    display: inline-flex;
+  }
+  #menuIcon{
+    display: none;
+   }
+  .SubPages{
+    display: flex;
+    gap: 1em;
+  }
+  .topDiv{
+    display: flex;
+    justify-content: space-between;
+  }
+  .mainContent, .Overview{
+    display: flex;
+    padding: 1em;
+    gap:2rem ;
+    border: 1px solid red;
+  }
+  .Introduction, .Overview p,.shipping p{
+    max-width: 50ch;
+  }
+  .car-models{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid red;
+  }
+  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CarSource{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid red;
+  }
+  .pageLinks{
+    flex-direction: row;
+    gap: var(--gap);
+  }
+  .Goals, .Values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ImportantDocs, .choice-factors,.test-class,.shipping-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  
+    margin-top: var(--margintop2);
+  }
+  .choice-factors p{
+  line-height: 4rem;
+  }
+  .choice, .choiceDivs,.CarPurchases,.shipping {
+    margin-top: var(--margintop2);
+  }
+  .shipping-info img{
+    height: 70%;
+  }
+  .contact-media{
+    display: flex;
+  }
+  .media-platforms{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: var(--margintop);
+  }
+ }
+ @media screen and (min-width:1024px) {
+  .topDiv{
+    display: flex;
+    justify-content: space-between;
+  }
+  #menuIcon{
+    display: none;
+   }
+  .SubPages{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .mainContent, .Overview{
+    display: flex;
+    gap:2rem ;
+    border: 1px solid red;
+  }
+  .Introduction, .Overview p,.shipping p{
+    max-width: 70ch;
+  }
+  .car-models{
+    display:grid;
+    margin: var(--margin);
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid red;
+  }
+  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping,.consulation-div,.workingHours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CarSource{
+    display:grid;
+    margin: var(--margin);
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid red;
+  }
+  .CarSource img{
+    height: fit-content;
+  }
+  .pageLinks{
+    flex-direction: row;
+    gap: var(--gap);
+  }
+  .Goals, .Values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ImportantDocs, .choice-factors,.test-class,.shipping-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: var(--margintop2);
+  }
+  .choice-factors p{
+  line-height: 3.8rem;
+  }
+  .choice, .choiceDivs,.CarPurchases,.shipping {
+    margin-top: var(--margintop2);
+  }
+  .shipping-info img{
+    height: 70%;
+  }
+  .contact-media{
+    display: flex;
+  }
+  .media-platforms{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: var(--margintop);
+  }
+ }
