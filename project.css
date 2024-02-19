@@ -1,12 +1,12 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family:'poppins',sans-serifs;
 }
 :root{
-  --headerOne:1.8rem;
-  --headerTwo:1.5rem;
+  --headerOne:1.7rem;
+  --headerTwo:1.3rem;
   --margin:0 auto;
   --marginBottom:1rem;
   --marginleft:.2em;
@@ -14,12 +14,12 @@
   --gap:1rem;
   --margintop2:3.5rem;
   --marginbottom2:3rem;
-  --span-size:1rem;
+  --span-size:1.5rem;
   --padding:.5em;
 }
 body{
-  max-width: 98%;
-  margin: var(--margin);
+  max-width: 100%;
+  min-height: 100vh;
   background-color: white;
 }
 h1{
@@ -28,10 +28,6 @@ h1{
 h2{
   font-size: var(--headerTwo);
 }
-a{
-  font-size: var(--para);
-  line-height: 1.5rem;
-}
 span{
   font-size: var(--span-size);
 }
@@ -39,39 +35,21 @@ i{
   margin: .5em;
 }
 p{
-  font-size:clamp(1.2rem, 1.3vw + 3px,2.8rem);
-  line-height: clamp(1.5rem,10vw + .5rem,2.8rem);
-  width: clamp(45ch,50%,75chs);
+  font-size:clamp(1vw, 1.35rem,3rem);
+  line-height: clamp(2rem, 6vw + 2px,3rem);
 }
 li{
-  font-size: 1rem,6vw + 2px,1.5rem;
-  line-height: 1rem,10vw + 2rem,2.5rem;
-  list-style-type:disc;
-  list-style-position: inside;
+  font-size: clamp(1rem,6vw + 2px,1.5rem);
+  line-height: clamp(1rem,10vw + 2rem,2.5rem);
+  list-style: none;
 }
-.pageLinks li{
-  list-style-type: none;
+a{
+  text-decoration: none;
+  color: red;
+
 }
-.marginBottom{
-  margin-bottom: var(--marginBottom);
-}
-#imgLogo{
-  width: 3.5rem;
-}
-#menuIcon{
-  width: 2rem;
-}
-.company-name{
-  display: none;
-}
-.SubPages-active{
-  display: flex;
-  flex-direction: column;
-}
-button{
-  width: fit-content;
-  height: fit-content;
-  padding: var(--padding);
+a:hover{
+  text-decoration: underline;
 }
 figure{
   width: 43%;
@@ -79,35 +57,74 @@ figure{
 img{
   width: 100%;
 }
+footer{
+  margin-top: var(--margintop);
+ }
+.marginBottom{
+  margin-bottom: var(--marginBottom);
+}
+#imgLogo{
+  width: 3.5rem;
+}
+.fa-solid{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .topDiv{
   display: flex;;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(211, 211, 211, 0.879);
+  background-color:darkred;
+  color: white;
+  flex: 0 1 0;
 }
-.right-topDiv{
-  display: flex;
-  gap: var(--gap);
+.mobileSubpages{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 90%;
+  z-index: 999;
+  background-color: rgba(211, 211, 211, 0.681);
+  backdrop-filter: blur(10px);
+  display:none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.SubPages{
+.hideOnMobile{
   display: none;
 }
-.SubPages li{
-list-style-type: none;
+.mobileSubpages li, .mobileSubpages a{
+  width: 100%;
 }
-.SubPages a, .pageLinks a{
-  text-decoration: none;
-  color: brown;
+.fa-brands{
+  font-size: 1.2em;
 }
-.SubPages a:hover, .pageLinks a:hover{
-  text-decoration: underline;
-  color: rgba(0, 0, 255, 0.934);
+.fa-facebook{
+  color: white;
+  background-color: blue;
+}
+.fa-whatsapp{
+  color: green;
+  background-color: white;
+}
+.fa-youtube{
+  color: red;
+  background-color: white;
+}
+.fa-envelope{
+  color: black;
 }
 .logoDiv{
   flex: 0 1 12rem;
+} 
+.memberCountries,.Goals,.choice,.shipping,.FAQ-section{
+  background-color:#f4f4f6;
 }
-.memberCountries, .Goals,.choiceDivs{
-  background-color: rgba(211, 211, 211, 0.879);
+.memberCountries:hover{
+  background-color: black;
+  color:red;
 }
 .partnerService,.lastDiv,.pageLinks,.contact-media{
   display: flex;
@@ -115,11 +132,11 @@ list-style-type: none;
   align-items: center;
 }
 .lastDiv{
-  border: 1px solid red;
-  background-color:rgba(147, 214, 240, 0.997);
+  background-color:black;
+  color: white;
+  justify-content: center;
 }
 .FAQ-section li{
-  list-style-position:inside;
   margin-bottom: var(--marginBottom);
 }
 .mainSection{
@@ -127,95 +144,82 @@ list-style-type: none;
   margin-top: var(--margintop);
  }
  .contact-media{
-  margin-bottom:3rem;
-  border: 1px solid red;
+  margin-bottom:var(--marginbottom2);
  }
  .workingHours{
   margin-bottom: var(--marginBottom);
  }
- footer{
-  margin-top: var(--margintop);
+ .toggleOn{
+  display: block;
  }
- .Documents,.shipping,.contact-media,.FAQ-section{
-  background-color: beige;
+ .contact-media{
+  display: flex;
+}
+.media-platforms{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: var(--margintop);
  }
- @media screen and (min-width:420px){
-  .company-name{
-    display: none;
+.documentsUl li{
+list-style-type: disc;
+list-style-position: inside;
+}
+
+@media screen and (min-width:575px) {
+  figure {
+    width:50% ;
   }
-   .topDiv{
-    justify-content: space-between;
-    align-items: center;
-    flex: 0 1 0;
-  }
-  .SubPages{
-    display: none;
-  }
-  .contact-media{
+  .mainContent,.Overview{
     display: flex;
   }
-  .media-platforms{
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-   margin-bottom: var(--margintop);
+  .Introduction,.Overview p{
+    width: 45ch;
   }
- }
- @media screen and (min-width:769px){
+  .car-models, .CarSource{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    align-items: center;
+  }
+  
+}
+ @media screen and (min-width:670px){
+  figure{
+    width: 50%;
+  }
+  .SubPages{
+    display: flex;
+    gap: var(--gap);
+  }
+  .toggleOn{
+    display: none;
+  }
   .company-name{
     display: inline-flex;
   }
-  #menuIcon{
-    display: none;
-   }
-  .SubPages{
+  .hideOnMobile{
     display: flex;
-    gap: 1em;
-  }
-  .topDiv{
-    display: flex;
-    justify-content: space-between;
-  }
-  .mainContent, .Overview{
-    display: flex;
-    padding: 1em;
-    gap:2rem ;
-    border: 1px solid red;
+    gap: var(--gap);
   }
   .Introduction, .Overview p,.shipping p{
     max-width: 50ch;
   }
-  .car-models{
+  .car-models,.CarSource{
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    border: 1px solid red;
   }
-  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping{
+  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping,.Goals, .Values{
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .CarSource{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    border: 1px solid red;
   }
   .pageLinks{
     flex-direction: row;
     gap: var(--gap);
   }
-  .Goals, .Values{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .ImportantDocs, .choice-factors,.test-class,.shipping-info{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-  
+    grid-template-columns: repeat(2,1fr); 
+    column-gap: var(--gap);
     margin-top: var(--margintop2);
-  }
-  .choice-factors p{
-  line-height: 4rem;
   }
   .choice, .choiceDivs,.CarPurchases,.shipping {
     margin-top: var(--margintop2);
@@ -223,41 +227,37 @@ list-style-type: none;
   .shipping-info img{
     height: 70%;
   }
-  .contact-media{
-    display: flex;
-  }
   .media-platforms{
    display: grid;
    grid-template-columns: repeat(2,1fr);
    margin-bottom: var(--margintop);
   }
  }
- @media screen and (min-width:1024px) {
-  .topDiv{
-    display: flex;
+
+ @media screen and (min-width:877px) {
+  figure{
+    width: 40%;
+  }
+  .mainContent, .Overview{
     justify-content: space-between;
   }
-  #menuIcon{
-    display: none;
-   }
+ }
+ @media screen and (min-width:1024px) {
+  figure{
+    width: 40%;
+  } 
   .SubPages{
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: var(--gap);
   }
-  .mainContent, .Overview{
-    display: flex;
-    gap:2rem ;
-    border: 1px solid red;
-  }
-  .Introduction, .Overview p,.shipping p{
-    max-width: 70ch;
+  .Introduction p, .Overview p,.shipping p{
+   width: 60ch;
   }
   .car-models{
     display:grid;
     margin: var(--margin);
     grid-template-columns: repeat(4,1fr);
-    border: 1px solid red;
   }
   .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping,.consulation-div,.workingHours{
     display: flex;
@@ -268,7 +268,6 @@ list-style-type: none;
     display:grid;
     margin: var(--margin);
     grid-template-columns: repeat(2,1fr);
-    border: 1px solid red;
   }
   .CarSource img{
     height: fit-content;
@@ -287,9 +286,6 @@ list-style-type: none;
     grid-template-columns: repeat(2,1fr);
     margin-top: var(--margintop2);
   }
-  .choice-factors p{
-  line-height: 3.8rem;
-  }
   .choice, .choiceDivs,.CarPurchases,.shipping {
     margin-top: var(--margintop2);
   }
@@ -305,3 +301,4 @@ list-style-type: none;
    margin-bottom: var(--margintop);
   }
  }
+ 

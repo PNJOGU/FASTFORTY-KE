@@ -5,26 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our services</title>
   <link rel="stylesheet" href="project.css">
+  <script src="project.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header>
-    <div class="topDiv marginBottom">
-        <div>
-          <img src="menu_FILL0_wght400_GRAD0_opsz24.svg" alt="menu-icon" id="menuIcon">
-        </div>
-        <div class="logoDiv">
-            <img src="FASTFORTY\IMG-20231221-WA0041 (1).jpg" alt="Fastforty Logo" id="imgLogo">  
-        </div>
-        <ul class="SubPages">
-          <li><a href="Index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="Services.html">Services</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
-          <li><a href="Contacts.html">Contacts</a></li>
-        </ul> 
-    </div>
-  </header>
+  <nav>
+    <div class="topDiv">
+      <div id="company-name"><h2>Fastforty Company</h2></div>
+       <div class="logoDiv">
+          <img src="FASTFORTY\IMG-20231221-WA0041 (1).jpg" alt="Fastforty Logo" id="imgLogo"></div>
+          <div class="right-topDiv">
+            <ul class="mobileSubpages">
+              <li class="toggleOff"><i class="fa-solid fa-xmark"></i></li>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Services.html">Services</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+              <li><a href="Contacts.html">Contacts</a></li>
+            </ul> 
+            <ul class="SubPages">
+              <li class="hideOnMobile"><a href="Index.html">Home</a></li>
+              <li class="hideOnMobile"><a href="About.html">About</a></li>
+              <li class="hideOnMobile"><a href="Services.html">Services</a></li>
+              <li class="hideOnMobile"><a href="FAQ.html">FAQ</a></li>
+              <li class="hideOnMobile"><a href="Contacts.html">Contacts</a></li>
+              <li class="toggleOn"><i class="fa-solid fa-bars"></i></li>
+            </ul> 
+          </div>
+       </div>
+  </nav> 
 
   <main class="mainSection">
     <div class="Documents marginBottom">
@@ -82,7 +94,7 @@
         <h2>Shipping</h2>
         <div class="shipping-info">
           <p>We ferry all products sourced through us by ship. Once all export documents have been signed at origin country's port, products are loaded into the ship and moved to their destined countries.We provide only two ways of shipment mainly Roro and containers.Import exercise will take at most 3 months once all details pertaining the trade have been finalised</p>
-          <figure class="pictureContainer">
+          <figure>
               <a href="FASTFORTY\IMG-20240116-WA0002.jpg"><img src="FASTFORTY\IMG-20240116-WA0002.jpg" alt="Purchased being loaded into the ship to be ferried to Mombasa Port"></a>
               <figcaption>Containers shipping</figcaption>
           </figure>
@@ -100,14 +112,15 @@
       <div class="lastDiv">
         <div>
           <span>Join our community on:</span>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-whatsapp"></i>
-          <i class="fa-brands fa-youtube"></i>
+          <a href="https://www.facebook.com/mabepari.oduor?mibextid=9R9pXO"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://chat.whatsapp.com/Hi4PkFXAcZq087qVb176zb"><i class="fa-brands fa-whatsapp" title="whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-youtube" title="youtube"></i></a>
+          <a href="mailto:fastforty2010@gmail.com"><i class="fa-regular fa-envelope" title="email"></i></a>
         </div>
-        <p> Fastforty Importers Kenya</p>
+        <p> Fastforty Importers & Exporters Co.Ltd</p>
           <p>We are a dedicated company committed to providing best services</p>
-            <p>P.o Box  | Kisumu, Kenya |Tel no: 254722669901 </p>
-            <p><a href="mailto:fastforty2010@gmail.com">fastforty2010@gmail.com</a></p>
+            <p>P.o Box  | Kisumu, Kenya |Tel no: <a href="tel:+25472266990">254722669901</a> <a href="tel:+254780009652">254780009652</a> </p>
+            <p><a href="mailto:info@fastfortyimporters.com">info@fastfortyimporters.com</a></p>
             <ul class="pageLinks">
               <li><a href="Project.html" class="pageLinksColor">Home</a></li>
               <li><a href="About.html" class="pageLinksColor">About</a></li>
@@ -117,7 +130,7 @@
             </ul>
             <p><i class="fa-regular fa-copyright"></i><span>FastForty Kenya All rights reserved 2024</span></p>
       </div>
-    </footer>           
+    </footer>          
 </body>
 
 </html>
