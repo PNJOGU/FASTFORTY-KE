@@ -19,6 +19,7 @@
 }
 body{
   max-width: 100%;
+  margin: var(--margin);
   min-height: 100vh;
   background-color: white;
 }
@@ -36,17 +37,15 @@ i{
 }
 p{
   font-size:clamp(1vw, 1.35rem,3rem);
-  line-height: clamp(2rem, 6vw + 2px,3rem);
+  line-height: clamp(2.3rem, 6vw + 2px,3rem);
 }
 li{
-  font-size: clamp(1rem,6vw + 2px,1.5rem);
-  line-height: clamp(1rem,10vw + 2rem,2.5rem);
-  list-style: none;
+  font-size: clamp(0.8vw,1.25rem,1.5rem);
+  line-height: clamp(0.8rem, 5vw + 1rem,2.5rem);
 }
 a{
   text-decoration: none;
   color: red;
-
 }
 a:hover{
   text-decoration: underline;
@@ -156,16 +155,26 @@ footer{
   display: flex;
 }
 .media-platforms{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  margin-bottom: var(--margintop);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--marginBottom);
  }
-.documentsUl li{
+ .media-platforms div{
+  background-color: #f1f1f1;
+ }
+.documentsUl li,.payments{
 list-style-type: disc;
 list-style-position: inside;
 }
-
+.hidelinks{
+  list-style-type: none;
+}
 @media screen and (min-width:575px) {
+  .media-platforms{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: var(--margintop);
+   }
   figure {
     width:50% ;
   }
