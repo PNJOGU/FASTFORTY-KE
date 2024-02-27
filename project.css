@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins',sans-serifs;
+}
+:root{
+  --headerOne:1.7rem;
+  --headerTwo:1.3rem;
+  --margin:0 auto;
+  --marginBottom:1rem;
+  --marginleft:.2em;
+  --margintop:0.5rem;
+  --gap:1rem;
+  --margintop2:3.5rem;
+  --marginbottom2:3rem;
+  --span-size:1.5rem;
+  --padding:.5em;
+}
+body{
+  max-width: 100%;
+  margin: var(--margin);
+  min-height: 100vh;
+  background-color: white;
+}
+h1{
+  font-size: var(--headerOne);
+}
+h2{
+  font-size: var(--headerTwo);
+}
+span{
+  font-size: var(--span-size);
+}
+i{
+  margin: .5em;
+}
+p{
+  font-size:clamp(1.1rem,5vw,1.5rem);
+  line-height: clamp(2.3rem, 6vw + 2px,3rem);
+}
+li{
+  font-size: clamp(0.8vw,1.25rem,1.5rem);
+  line-height: clamp(0.8rem, 5vw + 1rem,2.5rem);
+}
+a{
+  text-decoration: none;
+  color: red;
+}
+a:hover{
+  text-decoration: underline;
+}
+figure{
+  width: 43%;
+}
+img{
+  width: 100%;
+}
+footer{
+  margin-top: var(--margintop);
+ }
+.marginBottom{
+  margin-bottom: var(--marginBottom);
+}
+#imgLogo{
+  width: 3.5rem;
+}
+.fa-solid{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.topDiv{
+  display: flex;;
+  justify-content: space-between;
+  align-items: center;
+  background-color:darkred;
+  color: white;
+  flex: 0 1 0;
+}
+.mobileSubpages{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 90%;
+  z-index: 999;
+  background-color: rgba(211, 211, 211, 0.681);
+  backdrop-filter: blur(10px);
+  display:none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.hideOnMobile{
+  display: none;
+}
+.mobileSubpages li, .mobileSubpages a{
+  width: 100%;
+}
+.fa-brands{
+  font-size: 1.2em;
+}
+.fa-facebook{
+  color: white;
+  background-color: blue;
+}
+.fa-whatsapp{
+  color: green;
+  background-color: white;
+}
+.fa-youtube{
+  color: red;
+  background-color: white;
+}
+.fa-envelope{
+  color: black;
+}
+.logoDiv{
+  flex: 0 1 12rem;
+} 
+.memberCountries,.Goals,.choice,.shipping,.FAQ-section{
+  background-color:#f4f4f6;
+}
+.memberCountries:hover{
+  background-color: black;
+  color:red;
+}
+.partnerService,.lastDiv,.pageLinks,.contact-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lastDiv{
+  background-color:black;
+  color: white;
+  justify-content: center;
+}
+.FAQ-section li{
+  margin-bottom: var(--marginBottom);
+}
+.mainSection{
+  margin-left: var(--marginleft);
+  margin-top: var(--margintop);
+ }
+ .contact-media{
+  margin-bottom:var(--marginbottom2);
+ }
+ .workingHours{
+  margin-bottom: var(--marginBottom);
+ }
+ .toggleOn{
+  display: block;
+ }
+ .contact-media{
+  display: flex;
+}
+.media-platforms{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--marginBottom);
+ }
+ .media-platforms div{
+  background-color: #f1f1f1;
+ }
+.documentsUl li,.payments{
+list-style-type: disc;
+list-style-position: inside;
+}
+.hidelinks{
+  list-style-type: none;
+}
+@media screen and (min-width:575px) {
+  .media-platforms{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: var(--margintop);
+   }
+  figure {
+    width:50% ;
+  }
+  .mainContent,.Overview{
+    display: flex;
+  }
+  .Introduction,.Overview p{
+    width: 45ch;
+  }
+  .car-models, .CarSource{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    align-items: center;
+  }
+  
+}
+ @media screen and (min-width:670px){
+  figure{
+    width: 50%;
+  }
+  .SubPages{
+    display: flex;
+    gap: var(--gap);
+  }
+  .toggleOn{
+    display: none;
+  }
+  .company-name{
+    display: inline-flex;
+  }
+  .hideOnMobile{
+    display: flex;
+    gap: var(--gap);
+  }
+  .Introduction, .Overview p,.shipping p{
+    max-width: 50ch;
+  }
+  .car-models,.CarSource{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping,.Goals, .Values{
+    display: flex;
+    flex-direction: column;
+  }
+  .pageLinks{
+    flex-direction: row;
+    gap: var(--gap);
+  }
+  .ImportantDocs, .choice-factors,.test-class,.shipping-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    column-gap: var(--gap);
+    margin-top: var(--margintop2);
+  }
+  .choice, .choiceDivs,.CarPurchases,.shipping {
+    margin-top: var(--margintop2);
+  }
+  .shipping-info img{
+    height: 70%;
+  }
+  .media-platforms{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: var(--margintop);
+  }
+ }
+
+ @media screen and (min-width:877px) {
+  figure{
+    width: 40%;
+  }
+  .mainContent, .Overview{
+    justify-content: space-between;
+  }
+  .Introduction p, .Overview p,.shipping p{
+    min-width: 45ch;
+  }
+ }
+ @media screen and (min-width:1053px) {
+  figure{
+    width: 40%;
+  } 
+  .SubPages{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+  }
+  .Introduction p, .Overview p,.shipping p{
+    min-width: 52ch;
+  }
+  .car-models{
+    display:grid;
+    margin: var(--margin);
+    grid-template-columns: repeat(4,1fr);
+  }
+  .serviceDiv,.choice,.memberCountries,.choiceDivs,.CarPurchases,.shipping,.consulation-div,.workingHours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CarSource{
+    display:grid;
+    margin: var(--margin);
+    grid-template-columns: repeat(2,1fr);
+  }
+  .CarSource img{
+    height: fit-content;
+  }
+  .pageLinks{
+    flex-direction: row;
+    gap: var(--gap);
+  }
+  .Goals, .Values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ImportantDocs, .choice-factors,.test-class,.shipping-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: var(--margintop2);
+  }
+  .choice, .choiceDivs,.CarPurchases,.shipping {
+    margin-top: var(--margintop2);
+  }
+  .shipping-info img{
+    height: 70%;
+  }
+  .contact-media{
+    display: flex;
+  }
+  .media-platforms{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: var(--margintop);
+  }
+ }
+ 
