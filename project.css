@@ -36,7 +36,7 @@ i{
   margin: .5em;
 }
 p{
-  font-size:clamp(1vw, 1.35rem,3rem);
+  font-size:clamp(1.1rem,5vw,1.5rem);
   line-height: clamp(2.3rem, 6vw + 2px,3rem);
 }
 li{
@@ -261,7 +261,7 @@ list-style-position: inside;
     gap: var(--gap);
   }
   .Introduction p, .Overview p,.shipping p{
-   width: 60ch;
+    min-width: 52ch;
   }
   .car-models{
     display:grid;
