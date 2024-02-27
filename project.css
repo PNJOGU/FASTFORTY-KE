@@ -250,8 +250,11 @@ list-style-position: inside;
   .mainContent, .Overview{
     justify-content: space-between;
   }
+  .Introduction p, .Overview p,.shipping p{
+    min-width: 45ch;
+  }
  }
- @media screen and (min-width:1024px) {
+ @media screen and (min-width:1053px) {
   figure{
     width: 40%;
   } 
